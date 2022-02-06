@@ -83,7 +83,7 @@ async def bot_echo(message: types.Message,state:FSMContext):
     matn1: str = "#Bo'sh_fura_kerak \n\n"
     for a in lugat1:
         matn1 += a + lugat1[a] + '\n'
-    await bot.send_message(chat_id=kanallar[0],text=matn1)
+    await bot.send_message(chat_id=adminlar[0],text=matn1)
     await state.finish()
 
  @dp.message_handler(text='Kanalga_Ulashish',user_id=adminlar[0])
