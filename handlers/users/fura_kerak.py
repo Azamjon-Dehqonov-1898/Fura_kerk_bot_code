@@ -85,15 +85,15 @@ async def bot_echo(message: types.Message,state:FSMContext):
         matn1 += a + lugat1[a] + '\n'
     await bot.send_message(chat_id=kanallar[0],text=matn1)
     await state.finish()
-#
-# @dp.message_handler(text='Kanalga_Ulashish',user_id=adminlar[0])
-# async def tara(malumot: Message):
-#     matn1: str = "#Bo'sh_fura_kerak \n\n"
-#     for a in lugat1:
-#         matn1 += a + lugat1[a] + '\n'
-#
-#     for k in kanallar:
-#         await bot.send_message(chat_id=k,text=matn1,reply_markup=asosiy)
+
+ @dp.message_handler(text='Kanalga_Ulashish',user_id=adminlar[0])
+ async def tara(malumot: Message):
+     matn1: str = "#Bo'sh_fura_kerak \n\n"
+     for a in lugat1:
+         matn1 += a + lugat1[a] + '\n'
+
+     for k in kanallar:
+         await bot.send_message(chat_id=k,text=matn1,reply_markup=kanal_ulashish_kerak)
 
 
 @dp.message_handler(text="Yo'q",state=Forma2.tasdiqlash2)
